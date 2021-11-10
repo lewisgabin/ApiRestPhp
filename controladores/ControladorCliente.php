@@ -37,8 +37,8 @@ class ContoladorCliente
         $clientesEmail = ModeloCliente::index('clientes');
 
         foreach ($clientesEmail as $key => $value) {
-
-            if ($value['email'] == $datos['email']) {
+          
+            if ($value->email == $datos['email']) {
 
                 $json = array(
                     "status" => 404,
